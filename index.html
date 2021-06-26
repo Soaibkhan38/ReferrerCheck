@@ -1,12 +1,14 @@
 <script>
 function printer(){
-	var x = document.referrer
-  document.getElementById("x").innerHTML=x;
+    var x = document.referrer
+    if(x.includes("anidl") || x.includes("ouo") || x.includes(window.location.origin))
+        document.getElementById("x").innerHTML='Redirect: <b style=\'color: green\'>OK</b>';
+    else window.location.href='https://google.com'
 }
 </script>
 
 <body onload="printer()">
 <p id="x">
-
+	<p>Check out the sub-page: <a href="sub.html">Click here</a></p>
 </p>
 </body>
